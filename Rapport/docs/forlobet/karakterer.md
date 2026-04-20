@@ -2,6 +2,8 @@
 
 På **svendebrevet** står der én samlet karakter – men ved selve svendeprøven modtager I typisk **to delkarakterer**.
 
+Delen **projekt / dokumentation** vurderes ud fra **afleveringen** (kode, rapport, bilag). Hvis I vil løfte kvaliteten frivilligt — fx omkring test, sikkerhed, arkitektur og drift — kan I tage udgangspunkt i [Anbefalede ekstra features](anbefalede-ekstra-features.md) (vejledende, ikke officielle krav).
+
 ## To delkarakterer
 
 | Del | Hvad vurderes | Indflydelse fra fremlæggelse |

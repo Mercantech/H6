@@ -2,6 +2,10 @@
 
 Skabelon til MAGS svendeprøven. Overblik og krav: [H6 på Mercantec](https://mercantec.notion.site/h6).
 
+## Kildekode (`src/`)
+
+Al **kode**, der hører til produktet (applikation, scripts, tests), bør ligge under **`src/`**, så roden af repoet primært kan rumme dokumentation, konfiguration og værktøjer — fx `Rapport/` til MkDocs. Opret undermapper efter behov (fx `src/api/`, `src/lib/`). Se [`src/README.md`](src/README.md) for den korte vejledning.
+
 ## Notes
 
 Valgfri Obsidian-noter. Vil I ikke bruge dem, så slet mappen `Notes` (og evt. `.obsidian`).

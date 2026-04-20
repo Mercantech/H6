@@ -107,9 +107,11 @@ nav:
   - Start: index.md
   - H6-forløbet:
       - Overblik: forlobet/overblik.md
+      - Case-eksempler: forlobet/case-eksempler.md
       - Tidsplan & Gantt: forlobet/tidsplan.md
       - Formelle krav: forlobet/formelle-krav.md
       - Karakterer: forlobet/karakterer.md
+      - Anbefalede ekstra features: forlobet/anbefalede-ekstra-features.md
       - Eksamen: forlobet/eksamen.md
       - AI-politik: forlobet/ai-politik.md
       - Nyttige links: forlobet/links.md

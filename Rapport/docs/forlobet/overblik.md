@@ -22,11 +22,13 @@ Log ind med din institutionskonto, hvis linket kræver det.
 
 Ved aflevering forventes blandt andet:
 
-- **Case** (projektoplæg / casebeskrivelse)
+- **Case** (projektoplæg / casebeskrivelse) — se [Case-eksempler (inspiration)](case-eksempler.md)
 - **Logbog** med **estimeret og realiseret** tidsplan (fra dag 1)
 - **Produktrapport** (dokumentation af produktet)
 - **Procesrapport** (projektplanlægning med Gantt, logbog, konklusion — jf. MAGS-skabelon)
 - **Kildekode** – typisk via **GitHub** (se [nyttige links](links.md))
+
+**Tip (frivilligt):** [Anbefalede ekstra features](anbefalede-ekstra-features.md) — idéer der ofte styrker produkt og dokumentation; vælg efter tid og case.
 
 !!! info "To separate rapporter"
 

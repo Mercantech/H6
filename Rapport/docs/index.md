@@ -17,7 +17,7 @@ hide:
 
 ## Sådan bruger du det
 
-1. **Læs [H6-forløbet](forlobet/overblik.md)** – tidsplan, krav, eksamen og links.
+1. **Læs [H6-forløbet](forlobet/overblik.md)** – tidsplan, krav, eksamen og links. Til **case** kan du tage udgangspunkt i [Case-eksempler](forlobet/case-eksempler.md). Frivillige idéer til kvalitet: [Anbefalede ekstra features](forlobet/anbefalede-ekstra-features.md).
 2. **Skriv i `docs/skabelon/`** (produkt) og **`docs/skabelon-proces/`** (proces) – ét kapitel pr. fil.
 3. **Preview lokalt:**
 
