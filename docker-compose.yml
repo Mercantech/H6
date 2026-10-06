@@ -1,15 +1,11 @@
 # Dokploy: docker compose up -d --build
-#
-# Host(`h6.mercantec.tech`) → web:80 (MkDocs static)
-# Elev-apps under src/ kan senere tilføjes som api/web — hold samme mønster.
+# Ingen host-ports. Kun Traefik via labels.
 services:
   web:
     build:
       context: ./Rapport
       dockerfile: Dockerfile
     restart: unless-stopped
-    networks:
-      - dokploy-network
     labels:
       - traefik.enable=true
       - traefik.docker.network=dokploy-network
@@ -25,5 +21,6 @@ services:
       start_period: 15s
 
 networks:
-  dokploy-network:
+  default:
+    name: dokploy-network
     external: true
