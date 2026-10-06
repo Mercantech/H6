@@ -1,4 +1,4 @@
-# Produktion: byg statisk MkDocs-site og servér med nginx (Traefik → :80)
+# Produktion: byg statisk MkDocs-site og servér med nginx (Traefik → :3000)
 FROM python:3.12-slim-bookworm AS build
 
 WORKDIR /app
