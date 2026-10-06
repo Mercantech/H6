@@ -3,7 +3,7 @@
 services:
   web:
     ports:
-      - "${LOCAL_WEB_PORT:-6001}:3000"
+      - "${LOCAL_WEB_PORT:-6001}:80"
 
 networks:
   dokploy-network:
