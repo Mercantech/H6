@@ -1,5 +1,5 @@
 # Dokploy: docker compose up -d --build
-# Ingen host-ports. Kun Traefik via labels.
+# Ingen host-ports. Kun Traefik via labels (container-port 3000).
 services:
   web:
     build:
@@ -12,9 +12,9 @@ services:
       - traefik.http.routers.h6-web.rule=Host(`${APP_DOMAIN:-h6.mercantec.tech}`)
       - traefik.http.routers.h6-web.entrypoints=web
       - traefik.http.routers.h6-web.service=h6-web
-      - traefik.http.services.h6-web.loadbalancer.server.port=80
+      - traefik.http.services.h6-web.loadbalancer.server.port=3000
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/health"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
       interval: 15s
       timeout: 5s
       retries: 5
