@@ -22,12 +22,23 @@ mkdocs serve
 
 Åbn [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-**Docker** (samme mappe som `Dockerfile`):
+**Docker / Dokploy** (produktion → https://h6.mercantec.tech):
 
 ```bash
-cd Rapport
-docker build -t h6-rapport .
-docker run --rm -p 8000:8000 h6-rapport
+cp .env.example .env
+docker compose up -d --build
+```
+
+Lokalt (nginx + bygget site):
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+```
+
+Live-reload under skrivning:
+
+```bash
+docker compose -f docker-compose.dev.yml up
 ```
 
 PDF-export: `npm install` og `npm run pdf` i `Rapport` (kræver kørende docs-URL; se `Rapport/scripts/export-print-pdf.mjs`).

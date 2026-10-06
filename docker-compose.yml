@@ -1,11 +1,29 @@
+# Dokploy: docker compose up -d --build
+#
+# Host(`h6.mercantec.tech`) → web:3000 (MkDocs static)
+# Elev-apps under src/ kan senere tilføjes som api/web — hold samme mønster.
 services:
-  mkdocs:
-    image: python:3.12-slim
-    working_dir: /work
-    volumes:
-      - ./Rapport:/work
-    ports:
-      - "6001:6001"
-    command: >
-      sh -lc "pip install --no-cache-dir -r requirements-docs.txt
-      && mkdocs serve --dev-addr 0.0.0.0:6001"
+  web:
+    build:
+      context: ./Rapport
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.h6-web.rule=Host(`${APP_DOMAIN:-h6.mercantec.tech}`)
+      - traefik.http.routers.h6-web.entrypoints=web
+      - traefik.http.routers.h6-web.service=h6-web
+      - traefik.http.services.h6-web.loadbalancer.server.port=3000
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+networks:
+  dokploy-network:
+    external: true

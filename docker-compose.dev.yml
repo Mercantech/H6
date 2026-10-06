@@ -1,0 +1,12 @@
+# Lokal MkDocs med live reload (ikke til Dokploy)
+services:
+  mkdocs:
+    image: python:3.12-slim
+    working_dir: /work
+    volumes:
+      - ./Rapport:/work
+    ports:
+      - "${LOCAL_DOCS_PORT:-6001}:6001"
+    command: >
+      sh -lc "pip install --no-cache-dir -r requirements-docs.txt
+      && mkdocs serve --dev-addr 0.0.0.0:6001"

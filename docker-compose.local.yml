@@ -1,0 +1,11 @@
+# Lokal prod-lignende: docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+# Live-reload MkDocs: docker compose -f docker-compose.dev.yml up
+services:
+  web:
+    ports:
+      - "${LOCAL_WEB_PORT:-6001}:3000"
+
+networks:
+  dokploy-network:
+    external: false
+    name: h6-local
